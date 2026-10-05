@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mafde Ashak — Full-Stack .NET Developer</title>
+<meta name="description" content="Portfolio of Mafde Ashak, Full-Stack .NET Developer specializing in ASP.NET Core, C#, Azure and modern web architecture.">
+<meta name="theme-color" content="#06070F">
+<meta property="og:title" content="Mafde Ashak — Full-Stack .NET Developer">
+<meta property="og:description" content="Four years shipping web applications with C#, ASP.NET Core and React.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%238B6CFF'/%3E%3Ctext x='50' y='66' font-size='52' font-family='monospace' font-weight='700' text-anchor='middle' fill='white'%3E%3C/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ PAGE LOADER ============ -->
+<div class="page-loader" id="pageLoader" aria-hidden="true">
+  <span class="loader-mark">&lt;/&gt;</span>
+</div>
+
+<canvas id="starfield" aria-hidden="true"></canvas>
+<div class="grid-overlay" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-text">Mafde Ashak</span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#">Home</a>
+      <a href="#about">About</a>
+      <a href="#stack">skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch to light mode" aria-pressed="false">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="12" cy="12" r="4.2"/>
+          <path d="M12 2.5v2.4M12 19.1v2.4M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2.5 12h2.4M19.1 12h2.4M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5Z"/>
+        </svg>
+      </button>
+      <a href="#contact" class="btn btn-ghost nav-cta">Let's talk</a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero wrap" id="hero">
+    <div class="hero-copy">
+      <p class="hero-tag reveal" data-reveal>Full-Stack .NET Developer</p>
+
+      <h1 class="hero-name reveal" data-reveal>
+        <span class="hero-name-line">Mafde</span>
+        <span class="hero-name-line hero-name-accent" id="typedName" data-type-text="Ashak"></span>
+      </h1>
+
+      <p class="hero-desc reveal" data-reveal>
+   Hi, I'm Mafde Ashak, a Computer Science student and aspiring .NET Backend Developer. I'm passionate about building practical web applications and improving my skills in C#, ASP.NET Core, SQL Server, and backend development.
+      </p>
+      <div class="hero-actions reveal" data-reveal>
+        <a href="#projects" class="btn btn-primary">View projects</a>
+<a href="./assets/CV.pdf" download="Mafde_Ashak_CV.pdf" class="btn btn-outline">
+    Download CV
+</a>
+      </div>
+      <div class="hero-meta reveal" data-reveal>
+        <div class="hero-meta-item">
+          <span class="hero-meta-num" data-count-to="4" data-suffix="+">0</span>
+          <span class="hero-meta-label">years experience</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-num" data-count-to="30" data-suffix="+">0</span>
+          <span class="hero-meta-label">projects shipped</span>
+        </div>
+        <div class="hero-meta-item">
+          <span class="hero-meta-num" data-count-to="12">0</span>
+          <span class="hero-meta-label">production APIs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Photo sits next to the name. Spinning ring + two floating dots
+         are plain CSS animations (see .hero-photo-* in style.css). -->
+    <div class="hero-photo-wrap reveal" data-reveal>
+      <div class="hero-photo-ring"></div>
+      <img src="assets/images/mafde.jpg" alt="Mafde Ashak" class="hero-photo" width="260" height="260">
+      <span class="hero-photo-dot hero-photo-dot-1"></span>
+      <span class="hero-photo-dot hero-photo-dot-2"></span>
+    </div>
+
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section" id="about">
+    <div class="wrap section-grid">
+      <div class="section-label reveal" data-reveal>
+        <span class="mono-tag">01</span>
+        <h2>About</h2>
+      </div>
+
+      <div class="about-text reveal" data-reveal>
+        <p>
+I'm Mafde Ashak,
+ a Computer Science student with a strong interest in Backend Development and .NET technologies.
+I enjoy learning how applications work behind the scenes and turning ideas into practical,
+ reliable solutions. I'm currently focusing on C#, ASP.NET Core, SQL Server, 
+ and Object-Oriented Programming while building projects to improve my practical experience.
+        </p>
+        <p>
+    I'm always looking to learn new technologies, solve problems, 
+    and improve my development skills. 
+    My goal is to become a professional .NET Backend Developer and build useful applications that provide real value.
+        </p>
+        <ul class="about-facts">
+          <li><span>Based in</span> Minia, Egypt — open to remote</li>
+          <li><span>Currently</span> Junior Software Engineer</li>
+          <li><span>Focus</span> Backend architecture, API design, cloud infra</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ skills ============ -->
+  <section class="section section-alt" id="stack">
+    <div class="wrap section-grid">
+      <div class="section-label reveal" data-reveal>
+        <span class="mono-tag">02</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="section-body">
+        <div class="stack-layers">
+
+          <div class="stack-layer reveal" data-reveal>
+            <div class="stack-layer-head">
+              <span class="stack-layer-index">L1</span>
+              <h3>Languages &amp; Runtime</h3>
+            </div>
+            <div class="tag-row">
+              <span class="tag">C#</span>
+                            <span class="tag">C++</span>
+              <span class="tag">.NET 8</span>
+              <span class="tag">SQL</span>
+            </div>
+          </div>
+
+          <div class="stack-layer reveal" data-reveal>
+            <div class="stack-layer-head">
+              <span class="stack-layer-index">L2</span>
+              <h3>Backend</h3>
+            </div>
+            <div class="tag-row">
+              <span class="tag">ASP.NET Core</span>
+              <span class="tag">Entity Framework Core</span>
+            </div>
+          </div>
+
+          <div class="stack-layer reveal" data-reveal>
+            <div class="stack-layer-head">
+              <span class="stack-layer-index">L3</span>
+              <h3>Frontend</h3>
+            </div>
+            <div class="tag-row">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JAVA SCRIPT</span>
+            </div>
+          </div>
+
+          <div class="stack-layer reveal" data-reveal>
+            <div class="stack-layer-head">
+              <span class="stack-layer-index">L4</span>
+              <h3>Data &amp; Infra</h3>
+            </div>
+            <div class="tag-row">
+              <span class="tag">SQL Server</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">GitHub Actions</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROJECTS ============ -->
+  <section class="section" id="projects">
+    <div class="wrap section-grid">
+      <div class="section-label reveal" data-reveal>
+        <span class="mono-tag">03</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="section-body">
+        <div class="project-list">
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-card-media">
+              <!-- ADD PROJECT IMAGE: replace with
+                   <img src="assets/images/project-1.jpg" alt="Project name"> -->
+              <div class="media-placeholder"><span>01</span></div>
+            </div>
+            <div class="project-card-body">
+              <h3>ClinicOS — Clinic Management Platform</h3>
+              <p>
+                Multi-tenant SaaS for clinics to manage appointments, billing
+                and patient records. Built the API, the tenancy layer, and
+                the real-time queue board.
+              </p>
+              <div class="tag-row tag-row-mono">
+                <span class="tag tag-mono">ASP.NET Core</span>
+                <span class="tag tag-mono">EF Core</span>
+                <span class="tag tag-mono">React</span>
+                <span class="tag tag-mono">Azure SQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="#" target="_blank" rel="noopener">Source ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-card-media">
+              <div class="media-placeholder"><span>02</span></div>
+            </div>
+            <div class="project-card-body">
+              <h3>Ledger — Personal Finance API</h3>
+              <p>
+                Open-source finance tracking API with double-entry
+                accounting logic, budgeting rules engine, and a CQRS
+                pipeline for reporting.
+              </p>
+              <div class="tag-row tag-row-mono">
+                <span class="tag tag-mono">.NET 8</span>
+                <span class="tag tag-mono">MediatR</span>
+                <span class="tag tag-mono">PostgreSQL</span>
+                <span class="tag tag-mono">Docker</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="#" target="_blank" rel="noopener">Source ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card reveal" data-reveal>
+            <div class="project-card-media">
+              <div class="media-placeholder"><span>03</span></div>
+            </div>
+            <div class="project-card-body">
+              <h3>Fleetly — Live Fleet Tracking Dashboard</h3>
+              <p>
+                Real-time vehicle tracking dashboard for a logistics client.
+                SignalR streams for live position updates, map clustering
+                for 500+ concurrent vehicles.
+              </p>
+              <div class="tag-row tag-row-mono">
+                <span class="tag tag-mono">SignalR</span>
+                <span class="tag tag-mono">Blazor</span>
+                <span class="tag tag-mono">Redis</span>
+                <span class="tag tag-mono">SQL Server</span>
+              </div>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">Live site ↗</a>
+                <a href="#" target="_blank" rel="noopener">Source ↗</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EXPERIENCE ============ -->
+  <section class="section section-alt" id="experience">
+    <div class="wrap section-grid">
+      <div class="section-label reveal" data-reveal>
+        <span class="mono-tag">04</span>
+        <h2>Experience</h2>
+      </div>
+      <div class="section-body">
+        <ol class="timeline">
+          <li class="timeline-item reveal" data-reveal>
+            <div class="timeline-date">2026 — Present</div>
+            <div class="timeline-content">
+              <h3>Software Development Trainee — DEPI</h3>
+              <!-- <p class="timeline-org">Company Name, Cairo (Remote)</p> -->
+              <p>
+            Developing backend applications using C# and .NET.
+Working with SQL Server for database design and data management.
+Applying Object-Oriented Programming (OOP) and clean coding principles.
+Building web applications using ASP.NET Core.
+Using Git & GitHub for version control and project management.
+Working on practical projects and a final Capstone Project.
+              </p>
+            </div>
+          </li>
+          <li class="timeline-item reveal" data-reveal>
+            <div class="timeline-date"> 2025</div>
+            <div class="timeline-content">
+              <h3>.NET Developer — Personal Projects</h3>
+            <!-- <p class="timeline-org">Previous Company, Cairo</p>  -->
+              <p>
+       Building practical applications using C#, ASP.NET Core, and SQL Server.
+Designing relational databases and implementing CRUD operations.
+Developing RESTful APIs and connecting applications with databases.
+Applying OOP, SOLID principles, and software design concepts.
+Publishing projects on GitHub and continuously improving code quality.
+              </p>
+            </div>
+          </li>
+        
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="section contact" id="contact">
+    <div class="wrap section-grid">
+      <div class="section-label reveal" data-reveal>
+        <span class="mono-tag">05</span>
+        <h2>Contact</h2>
+      </div>
+      <div class="section-body reveal" data-reveal>
+        <p class="contact-lead">
+          Have a backend that needs rebuilding, or a product that needs a
+          full-stack .NET developer? I'm open to new roles and select
+          freelance work.
+        </p>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required autocomplete="name">
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="contact-links">
+<a href="mailto:mafdeashak@gmail.com"> mafdeashak@gmail.com</a>
+          <a href="https://github.com/mafdeashak-dot" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/mafde-ashak-072124379" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+  
+<button class="scroll_up">
+<img src="assets/images/arrow-up.png">
+</button>
+
+
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>© <span id="year"></span> Mafde Ashak</p>
+  </div>
+</footer>
+
+
+
+<script src="js/script.js"></script>
+</body>
+</html>
+
